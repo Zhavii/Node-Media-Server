@@ -15,6 +15,18 @@ const config = {
     }
 	*/
   },
+  trans: {
+    ffmpeg: '/usr/local/bin/ffmpeg',
+    tasks: [
+      {
+        app: 'live',
+        hls: true,
+        hlsFlags: '[hls_time=2:hls_list_size=3:hls_flags=delete_segments]',
+        dash: true,
+        dashFlags: '[f=dash:window_size=3:extra_window_size=5]'
+      }
+    ]
+  },
   http: {
     port: 8000,
     mediaroot: './media',
@@ -30,10 +42,10 @@ const config = {
   auth: {
     api: true,
     api_user: 'admin',
-    api_pass: 'admin',
+    api_pass: 'asif0471',
     play: false,
     publish: false,
-    secret: 'nodemedia2017privatekey'
+    secret: 'shawsuperSecurePrivateKey'
   }
 };
 
