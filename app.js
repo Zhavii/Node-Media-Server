@@ -2,7 +2,7 @@ const NodeMediaServer = require('./');
 
 const config = {
   rtmp: {
-    port: 1935,
+    port: process.env.PORT || 1935,
     chunk_size: 60000,
     gop_cache: true,
     ping: 30,
@@ -35,7 +35,7 @@ const config = {
     api: true
   },
   https: {
-    port: 8443,
+    port: process.env.PORT || 8443,
     key: './privatekey.pem',
     cert: './certificate.pem',
   },
